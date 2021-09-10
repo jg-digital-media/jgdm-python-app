@@ -1,0 +1,131 @@
+/*
+*
+* Last Update:  09-09-2021 - 11:27
+*/
+main button,
+main a.goToForm, main .edit-delete-block a.btn_edit,
+main .edit-delete-block a.btn_delete {
+  width: 100px;
+  display: inline-block;
+  color: #000000;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 10px 0px;
+  background: #f0f075;
+  border: solid orange 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase; }
+  main button:hover,
+  main a.goToForm:hover, main .edit-delete-block a.btn_edit:hover,
+  main .edit-delete-block a.btn_delete:hover {
+    background: #eeee5e; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: darkseagreen;
+  font-family: arial; }
+
+header {
+  width: 100%;
+  height: auto;
+  height: 80px;
+  color: white;
+  color: #000000; }
+  header h1 {
+    text-align: center; }
+  header nav {
+    text-align: center; }
+    header nav ul {
+      list-style: none; }
+      header nav ul li {
+        display: inline-block; }
+      header nav ul a {
+        color: #000000;
+        text-decoration: none; }
+        header nav ul a:hover {
+          border-bottom: solid 2px black; }
+      header nav ul .selected {
+        border-bottom: solid 2px black; }
+
+main {
+  display: block;
+  margin: 0 auto;
+  width: 480px; }
+  main h1, main h2 {
+    color: #000000;
+    text-align: center; }
+  main p {
+    color: #000000; }
+  main table {
+    display: block;
+    margin: 0 auto;
+    border: solid red 2px;
+    background: #f2cc86;
+    color: #000000; }
+    main table tbody td {
+      width: 10%;
+      border: green 2px solid; }
+      main table tbody td a {
+        color: #a38b11;
+        text-decoration: none; }
+        main table tbody td a:hover {
+          color: #5f530e; }
+    main table tbody th {
+      width: 10%;
+      border: blue 2px solid;
+      height: 30px; }
+  main form .form-container label {
+    width: 80px;
+    display: inline-block;
+    height: 45px; }
+  main form .form-container label + input {
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 15px; }
+  main form fieldset div label {
+    width: 80px; }
+  main form fieldset div legend + input[type='radio'],
+  main form fieldset div legend + input[type='checkbox'],
+  main form fieldset div input[type='radio'],
+  main form fieldset div input[type='checkbox'] {
+    border: solid red 3px;
+    height: 30px;
+    vertical-align: middle; }
+  main form fieldset div legend {
+    border: solid red 3px;
+    height: 30px;
+    vertical-align: top; }
+
+.success {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  background: #5af05a;
+  color: green;
+  border: dashed green 3px; }
+
+.error {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  background: #ed6f6f;
+  color: red;
+  border: dashed red 3px; }
+
+footer {
+  width: 100%;
+  margin-top: 14px;
+  color: #000000; }
+  footer p {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
