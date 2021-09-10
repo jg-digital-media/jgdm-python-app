@@ -1,0 +1,78 @@
+{% extends "main.html" %}
+
+
+    {% block title_block %} title index {% endblock %}   
+
+    {% block nav_block %} 
+        <nav>
+            <ul>
+                <li><a href="/" class="selected" >One</a></li>
+                <li><a href="/two">Two</a></li>
+                <li><a href="/three">Three</a></li>
+            </ul>
+        </nav>
+    {% endblock %}   
+
+    {% block main_block %}
+        <h2>Data Table - Roster</h2>
+
+        <!-- Add flash messing-->
+        {% with messages = get_flashed_messages() %}  
+
+        {% if messages %}  
+            {% for message in messages %}  
+                <p class="success">{{ message }}</p>  
+            {% endfor %}  
+        {% endif %}  
+
+        {% endwith %}  
+
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th>Age:</th>
+                <th>Date:</th>
+            </tr>
+
+            {% for people in roster %}
+
+                <tr>
+                    <td> <a href="{{ url_for('single', id=people.id )}}">{{ people.name }} </a> </td>
+                    <td>{{ people.age }}</td>
+                    <td>{{ people.joined }}</td>
+                </tr>
+
+            {% endfor %}
+
+            <!-- <tr>
+                <td>Data 1</td>
+                <td>Data 1</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 2</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 3</td>
+                <td>Data 3</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td>Data 4</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 5</td>
+                <td>Data 5</td>
+                <td>Data 3</td>
+            </tr> -->
+        </table>
+        {% endblock %}
+   
+
+        {% block btn_block %}
+            <a class="goToForm" href="{{ url_for('main_form') }}" title="Add a new entry" aria-label="Add a new entry">Add New Data</a>
+        {% endblock %}

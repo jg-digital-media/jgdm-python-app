@@ -1,0 +1,50 @@
+{% extends "main.html" %}
+
+
+    {% block title_block %} title form {% endblock %}
+        
+        <h1>Flask with SQL</h1>
+
+        {% block nav_block %}
+        <nav>
+            <ul>
+                <li><a href="/" class="selected" >One</a></li>
+                <li><a href="/two">Two</a></li>
+                <li><a href="/three">Three</a></li>
+            </ul>
+        </nav>
+        {% endblock %}
+
+
+        
+        {% block main_block %}
+
+            <h2>Edit details for {{roster.name}} (ID: {{ roster.id }})</h2>
+
+            <form action="{{ url_for('form_edit', id=roster.id) }}" method="POST">
+
+                <div class="form-container">
+
+                    <label for ="name">Name: </label>
+
+                    <input type="text" name="name" title="Form name" id="Form_name" aria-label="Form name" class="form_field" placeholder="placeholder name" alt="form_name"  value="{{ roster.name }}"/>
+
+                </div>
+                
+                <div class="form-container">
+
+                    <label for="age">Age: </label>
+                    <input id="age" name="age" title="Form age" type="text" id="form_age" arial-label="Form age" class="form_field" placeholder="placeholder age" alt="form_age" value="{{ roster.age }}" />
+
+                </div>        
+
+                <div id="form-buttons">
+
+                    <button type="reset">Cancel</button>            
+                    <button type="submit">Submit</button>
+                
+                </div>
+
+            </form>
+
+{% endblock %}

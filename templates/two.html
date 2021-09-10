@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+
+    {% block title_block %} title index 2 {% endblock %}
+
+        <h1>Flask with SQL</h1>
+
+        {% block nav_block %}
+        <nav>
+            <ul>
+                <li><a href="/" class="selected" >One</a></li>
+                <li><a href="/two">Two</a></li>
+                <li><a href="/three">Three</a></li>
+            </ul>
+        </nav>
+        {% endblock %}     
+
+
+        {% block main_block %}
+  
+            <h2>Two</h2>
+
+            <p>Lorem 2</p>
+            
+        {% endblock %}
+
+
+        {% block btn_block %}
+            <button>Data 2 </button>
+        {% endblock %}

@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+
+
+    {% block title_block %} title index {% endblock %}   
+
+    {% block nav_block %} 
+        <nav>
+            <ul>
+                <li><a href="/" class="selected" >One</a></li>
+                <li><a href="/two">Two</a></li>
+                <li><a href="/three">Three</a></li>
+            </ul>
+        </nav>
+    {% endblock %}   
+
+    {% block main_block %}
+
+        <h2>Roster ID Number: {{ roster.id }}</h2>
+
+        <div class="name_data_single">
+
+            <h3>{{ roster.name }}</h3>
+            <p>Name Description data goes here</p>
+
+        </div>
+
+        <div class="edit-delete-block">
+            <a href="{{ url_for('form_edit', id=roster.id) }}" class="btn_edit">Edit</a>
+            <a href="{{ url_for('delete_record', id=roster.id) }}" class="btn_delete">Delete</a>
+        </div>
+
+    {% endblock %}
+
