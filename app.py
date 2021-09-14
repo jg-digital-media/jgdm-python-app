@@ -37,7 +37,8 @@ def main_form():
         # add new record
         new_data = Roster(
             name=request.form['name'], 
-            age=request.form['age']) 
+            age=request.form['age'],
+            description=request.form['description'])
             # joined=request.form['joined'])
 
         db.session.add(new_data)
@@ -65,6 +66,7 @@ def form_edit(id):
 
         roster.name = request.form["name"]  
         roster.age = request.form["age"]
+        roster.description = request.form["description"]
         db.session.commit()
 
         flash("A new edit was successfully completed")

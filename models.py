@@ -19,6 +19,7 @@ class Roster(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column("Name", db.String(80), unique=True, nullable=False)
     age = db.Column("Age", db.Integer, unique=True, nullable=False)
+    description = db.Column("Description", db.String(280), unique=True, nullable=False)
     joined = db.Column('Joined', db.DateTime, default=datetime.datetime.now)
 
     def __repr__(self):
