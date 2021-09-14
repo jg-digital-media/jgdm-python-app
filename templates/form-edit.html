@@ -36,7 +36,16 @@
                     <label for="age">Age: </label>
                     <input id="age" name="age" title="Form age" type="text" id="form_age" arial-label="Form age" class="form_field" placeholder="placeholder age" alt="form_age" value="{{ roster.age }}" />
 
-                </div>        
+                </div>   
+                
+                <div class="form-container">
+
+                    <label for="description">Description: </label>
+                    <textarea id="description" name="description" title="Form description" type="text" arial-label="Form description" class="form_field" maxlength="280" placeholder="placeholder description" alt="form_description">{{ roster.description }}
+
+                    </textarea>
+
+                </div>       
 
                 <div id="form-buttons">
 
