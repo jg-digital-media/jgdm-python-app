@@ -1,4 +1,4 @@
-# jgdm_python_sqlalchemy  - jgdm-python-app (**Last Update: 13-09-2021** - 09:26)
+# jgdm_python_sqlalchemy  - jgdm-python-app (**Last Update: 14-09-2021** - 10:21)
 
 ## Flask with SQL
 
