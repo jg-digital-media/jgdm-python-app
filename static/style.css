@@ -1,33 +1,7 @@
 /*
 *
-* Last Update:  09-09-2021 - 11:27
+* Last Update:  15-02-2022 - 12:59
 */
-main button,
-main a.goToForm, main .edit-delete-block a.btn_edit,
-main .edit-delete-block a.btn_delete {
-  width: 100px;
-  display: inline-block;
-  color: #000000;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 0 auto;
-  padding: 10px 0px;
-  background: #f0f075;
-  border: solid orange 1px;
-  border-radius: 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  text-align: center;
-  text-transform: uppercase; }
-  main button:hover,
-  main a.goToForm:hover, main .edit-delete-block a.btn_edit:hover,
-  main .edit-delete-block a.btn_delete:hover {
-    background: #eeee5e; }
-
-* {
-  padding: 0;
-  margin: 0; }
-
 body {
   background: darkseagreen;
   font-family: arial; }
@@ -53,6 +27,32 @@ header {
           border-bottom: solid 2px black; }
       header nav ul .selected {
         border-bottom: solid 2px black; }
+
+main button,
+main a.goToForm, main .edit-delete-block a.btn_edit,
+main .edit-delete-block a.btn_delete {
+  width: 100px;
+  display: inline-block;
+  color: #000000;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 10px 0px;
+  background: #f0f075;
+  border: solid orange 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase; }
+  main button:hover,
+  main a.goToForm:hover, main .edit-delete-block a.btn_edit:hover,
+  main .edit-delete-block a.btn_delete:hover {
+    background: #eeee5e; }
+
+* {
+  padding: 0;
+  margin: 0; }
 
 main {
   display: block;
@@ -81,27 +81,55 @@ main {
       width: 10%;
       border: blue 2px solid;
       height: 30px; }
-  main form .form-container label {
-    width: 80px;
-    display: inline-block;
-    height: 45px; }
-  main form .form-container label + input {
-    height: 30px;
-    border-radius: 5px;
-    padding: 0 15px; }
-  main form fieldset div label {
-    width: 80px; }
-  main form fieldset div legend + input[type='radio'],
-  main form fieldset div legend + input[type='checkbox'],
-  main form fieldset div input[type='radio'],
-  main form fieldset div input[type='checkbox'] {
-    border: solid red 3px;
-    height: 30px;
-    vertical-align: middle; }
-  main form fieldset div legend {
-    border: solid red 3px;
-    height: 30px;
-    vertical-align: top; }
+  main form {
+    border: black solid 1px;
+    background: #9ff59f;
+    padding: 15px; }
+    @media (max-width: 540px) {
+      main form {
+        width: 90%;
+        display: block;
+        margin: 0 auto; } }
+    main form .form-container label {
+      width: 100px;
+      display: inline-block;
+      height: 45px;
+      margin: 5px 10px;
+      vertical-align: top; }
+    main form .form-container label + input {
+      height: 30px;
+      border-radius: 5px;
+      width: 200px;
+      max-width: 200px;
+      padding: 0 15px;
+      transition: background .3s; }
+      main form .form-container label + input:hover {
+        background: lightgreen; }
+    main form .form-container label + textarea {
+      height: 60px;
+      width: 80px;
+      width: 200px;
+      max-width: 200px;
+      padding: 0 15px;
+      transition: background .3s; }
+      main form .form-container label + textarea:hover {
+        background: lightgreen; }
+    main form #form-buttons {
+      /* margin: 0 auto; */
+      text-align: center; }
+    main form fieldset div label {
+      width: 80px; }
+    main form fieldset div legend + input[type='radio'],
+    main form fieldset div legend + input[type='checkbox'],
+    main form fieldset div input[type='radio'],
+    main form fieldset div input[type='checkbox'] {
+      border: solid red 3px;
+      height: 30px;
+      vertical-align: middle; }
+    main form fieldset div legend {
+      border: solid red 3px;
+      height: 30px;
+      vertical-align: top; }
 
 .success {
   padding: 10px;
