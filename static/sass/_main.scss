@@ -1,0 +1,230 @@
+
+
+// extend button
+
+%app_btn {
+    width: 100px;
+    display: inline-block;
+    
+    color: $main-col-two;
+    font-size: 12px;
+    text-decoration: none;
+    
+    margin: 0 auto;
+    padding: 10px 0px;
+    background: #f0f075;
+    border: solid orange 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        background: darken(#f0f075, 5%);
+    }
+
+    a {
+    }
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+main {
+
+    display: block;
+    margin: 0 auto;
+    width: 480px;
+    
+
+    h1, h2 {        
+        color: $main-col-two;
+        text-align: center;
+
+    }
+
+    p {
+        color: $main-col-two;
+    }
+
+    table {
+
+        display: block;
+        margin: 0 auto;
+        border: solid red 2px;
+        background: #f2cc86;
+        color: $main-col-two;
+
+        tbody {
+
+            tr {
+
+            }
+
+            td {
+                width: 10%;
+                border: green 2px solid;
+
+                a {
+                    color: #a38b11;
+                    text-decoration: none;
+                    &:hover {
+                        color: #5f530e;
+                    }
+                }
+            }
+
+            th {
+
+                width: 10%;
+                border: blue 2px solid;
+                height: 30px;
+
+            }
+        }
+
+        
+    }
+
+    
+    // main form - templates/form_template_example       
+    form {
+
+        border: black solid 1px;
+        background: #9ff59f;
+        padding: 15px;
+
+        @media( max-width: $form-md ) {
+
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .form-container {
+
+            label {
+
+                width: 100px;
+                display: inline-block;
+                height: 45px;
+                margin: 5px 10px;
+                vertical-align: top;
+            }
+
+            label + input {
+
+                height: 30px;    
+                border-radius: 5px;
+                width: 200px;
+                max-width: 200px;
+                padding: 0 15px;
+                transition: background .3s;
+
+                &:hover {
+
+                    
+                    background: lightgreen;
+                }
+            }
+
+
+            label + textarea {
+
+                height: 60px;
+                width: 80px;
+                width: 200px;
+                max-width: 200px;
+
+                padding: 0 15px;
+                transition: background .3s;
+
+                &:hover {
+
+                    
+                    background: lightgreen;
+                }
+
+            }           
+
+
+        }    
+
+        
+        #form-buttons {
+
+            /* margin: 0 auto; */
+            text-align: center;
+        }    
+
+        fieldset {
+
+            div {
+
+                label {
+                    width: 80px;
+                }
+
+
+                legend + input[type='radio'],
+                legend + input[type='checkbox'],
+                input[type='radio'],
+                input[type='checkbox'] {
+                    border: solid red 3px;
+                    height: 30px;
+                    vertical-align: middle;
+                }
+
+                legend {
+                    border: solid red 3px;
+                    height: 30px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+
+    button,
+    a.goToForm {
+
+        @extend %app_btn;
+
+    }
+
+    
+    .edit-delete-block {
+
+        a.btn_edit,
+        a.btn_delete {
+            @extend %app_btn;
+        }
+    }
+}
+
+.success {
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    background: #5af05a;
+    color: green;
+    border: dashed green 3px;
+}
+
+.error {
+    
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    background: #ed6f6f;
+    color: red;
+    border: dashed red 3px;
+
+}

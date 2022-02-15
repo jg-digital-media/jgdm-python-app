@@ -1,0 +1,47 @@
+body {
+    background: darkseagreen;
+    font-family: $font-main-one;
+}
+
+
+header {
+
+    width: 100%;
+    height: auto;
+    height: 80px;
+    
+    color: $main-col-one;
+    color: $main-col-two;
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+
+        text-align: center;
+
+        ul {
+
+            list-style: none;
+
+            li {
+                display: inline-block;
+
+            }
+
+            a {
+                color: $main-col-nav;
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: solid 2px $main-col-nav-selected;
+                }
+            }
+
+            .selected {
+                border-bottom: solid 2px $main-col-nav-selected;
+            }
+        }
+    }
+}
