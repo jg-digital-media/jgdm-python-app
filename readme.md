@@ -1,4 +1,4 @@
-# jgdm_python_sqlalchemy  - jgdm-python-app (**Last Update: 14-09-2021** - 10:21)
+# jgdm_python_sqlalchemy  - jgdm-python-app (**Last Update: 15-02-2021** - 12:58)
 
 ## Flask with SQL
 
@@ -25,3 +25,7 @@ Install flask - ```pip install flask```
 Install SQLAlchemy - ```pip install sqlalchemy```
 
 Install Flask-SQLAlchemy - ```pip install Flask-SQLAlchemy```
+
+## Once installed run the local development server
+
+```python app.py``` - Check the console/terminal for your localhost URL.
